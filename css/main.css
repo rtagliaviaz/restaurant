@@ -1,0 +1,290 @@
+/* red #BA031F*/
+/* white #FFFFF2*/
+/* green #034C3C*/
+/* black #1E1B18*/
+/* HEADER SECTION */
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../img/bg1.jpeg) center/cover fixed no-repeat;
+  font-family: 'Bangers', cursive;
+}
+
+/*NAVBAR*/
+.navbar {
+  background: #DDDA99;
+  font-size: 22px;
+}
+
+.navbar .name {
+  color: #03701E;
+}
+
+/*HEADER*/
+header {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url(../img/bg.jpg) center/cover fixed no-repeat;
+  position: relative;
+  font-family: 'Bangers', cursive;
+}
+
+.banner h1 {
+  /*ANIMATION*/
+  animation: fromLeft;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/*ANIMATION*/
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(30px);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.height-90 {
+  min-height: calc(100vh - 94px);
+}
+
+.main-btn {
+  color: #BA031F;
+  font-size: 2rem;
+  border: 2px solid #BA031F;
+  transition: all 1s ease-in-out;
+}
+
+.main-btn:hover {
+  color: #BA031F;
+  border: 2px solid #DDDA99;
+  background: #DDDA99;
+}
+
+.pizza-btn {
+  /*ANIMATION*/
+  animation: Button;
+  animation-duration: 4s;
+}
+
+/*ANIMATION*/
+@keyframes Button {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.color-r {
+  color: #BA031F;
+}
+
+.color-g {
+  color: #034C3C;
+}
+
+.color-w {
+  color: #DDDA99;
+}
+
+.color-b {
+  color: #1E1B18;
+}
+
+/* GALLERY SECTION */
+#gallery {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/bg1.jpeg) center/cover fixed no-repeat;
+}
+
+.item-container {
+  position: relative;
+  /* for the link */
+  overflow: hidden;
+  background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+  transition: all 2s ease;
+}
+
+.item-img {
+  transition: all 2s ease;
+}
+
+.item-container:hover .item-img {
+  transform: scale(1.2);
+  opacity: 0.5;
+}
+
+.item-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #DDDA99;
+  font-size: 2rem;
+  border-top: 3px solid #DDDA99;
+  border-bottom: 3px solid #DDDA99;
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+.item-container:hover .item-link {
+  opacity: 1;
+}
+
+.item-link:hover {
+  color: #DDDA99;
+  border: 3px solid #DDDA99;
+  background: #DDDA99;
+  color: #BA031F;
+}
+
+.item-container:hover {
+  outline: 10px solid #034C3C;
+  outline-offset: 0.8rem;
+}
+
+/*MENU*/
+#menu {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.6)),
+    url(../img/bg2.jpeg)center/cover no-repeat;
+}
+
+.bor-r {
+  border: 3px solid #BA031F;
+}
+
+.bor-l {
+  border: 3px solid#034C3C
+}
+
+/*ABOUT*/
+#about h2 {
+  /*color: #DBDFAC;*/
+  color: #DDDA99;
+}
+
+.about-pictures {
+  position: relative;
+}
+
+.about-image {
+  position: absolute;
+  width: 170px;
+  transition: all 1s ease;
+  opacity: 0.9;
+}
+
+.img-1 {
+  left: 0%;
+  top: 0%;
+  border-radius: 50%;
+}
+
+.img-2 {
+  left: 20%;
+  top: 20%;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.img-3 {
+  left: 40%;
+  top: 45%;
+  z-index: 20;
+  border-radius: 50%;
+}
+
+.img-4 {
+  left: 40%;
+  top: 0%;
+  border-radius: 50%;
+}
+
+.img-5 {
+  left: 0%;
+  top: 45%;
+  border-radius: 50%;
+}
+
+.about-image:hover {
+  transform: scale(2) rotate(360deg);
+  z-index: 30;
+  opacity: 1;
+}
+
+.about-pictures:hover .about-image:not(:hover) {
+  opacity: 0.5;
+}
+
+/*##########CONTACT###############*/
+.height-60 {
+  min-height: 60vh;
+}
+
+#contact .card {
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 2s ease;
+}
+
+#contact .card:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#contact .card-header {
+  color: #BA031F;
+}
+
+#contact .input-group-text {
+  background: #BA031F;
+  border-color: #BA031F;
+  color: #242424;
+}
+
+#contact .card input {
+  color: #606060;
+}
+
+#contact .card input::placeholder {
+  color: #606060;
+}
+
+.contact-btn {
+  color: #BA031F;
+  border-color: #BA031F;
+  background: transparent;
+  transition: all 2s ease-in-out;
+}
+
+.contact-btn:hover {
+  background: #DDDA99;
+  color: #BA031F;
+  border-color: #DDDA99;
+}
+
+/*#############footer##########*/
+#footer {
+  background: #DDDA99;
+}
+
+.fab {
+  transition: 1.5s all ease;
+}
+
+.fab:hover {
+  color: #034C3C;
+}
